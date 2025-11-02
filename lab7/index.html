@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DEISI-SHOP</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/deisi-ball.png">
+</head>
+<body>
+    <header>
+        <h1>Deisi Shop</h1>
+        <section class="filtros">
+            <span>
+                <p>Procura</p>
+                <input id="filtroBusca" name="filtroBusca" type="text" placeholder="O que procura?" maxlength="50" autocomplete="off">
+            </span>
+        </section>
+        <section class="filtros">
+            <span>
+                <p>Filtrar</p>
+                <select id="filtroArtigo" name="filtroArtigo">
+                    <option value="todos">Todos os artigos</option>
+                </select>
+                
+            </span>
+            <span>
+                <p>Ordenar</p>
+                <select id="filtroOrdenacao">
+                    <option value="normal">Ordenar pelo preço</option>
+                    <option value="crescente">Preço (mais baixo)</option>
+                    <option value="decrescente">Preço (mais alto)</option>
+                </select>
+                
+            </span>
+        </section>
+        <nav>
+            <ul>
+                <li>
+                    <p id="quantProdutos"></p>
+                    <a href="#h2_produtos">Produtos</a>
+                </li>
+                <li>
+                    <p id="quantCesto">0</p>
+                    <a href="#h2_cesto">Cesto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2 id="h2_produtos">Selecione os seus Produtos</h2>
+        <span id="carregamento" class="oculto">Carregando... <span id="spinner"></span></span>
+        <span id="mensagemSemProduto" class="oculto">Nenhum produto foi encontrado...</span>
+        <section id = "produtos">
+
+        </section>
+        <h2 id="h2_cesto">Produtos Selecionados <p><i id="custoTotal"></i></p></h2>
+         <button id="mostrarCampoPagamento" class="oculto">Comprar</button>
+        <section id = "cesto">
+
+        </section>
+        
+<aside id="campoPagamento" class="oculto">
+            <button id="fecharCampoPagamento">X</button>
+
+            <section>
+                <h3>Campo de pagamento</h3>
+            
+                <form id="formPagamento">
+                    <span>
+                        <p>É estudante DEISI?</p>
+                        <input id="estudante" type="checkbox">
+                    </span>
+                    <span>
+                        <p>Aplicar código de cupom</p>
+                        <input id="cupom" type="text" maxlength="15" autocomplete="off" placeholder="black-friday">
+                    </span>
+                    <span>
+                        <p>A compra ficará no nome de</p>
+                        <input id="nome" type="text" maxlength="30" autocomplete="off" required>
+                    </span>
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
+
+            <section id="mensagensCompraRealizada" class="oculto">
+                <p id="mensagemNome"></p>
+                <p id="mensagemEndereço"></p>
+                <p id="mensagemPrecoFinal"></p>
+                <p id="mensagemReferencia"></p>
+            </section>
+        </aside>
+
+    </main>
+    <footer>
+        <p>Universidade Lusófona © 2025</p>
+        <p>Desenvolvimento de Interfaces Web</p>
+        <p>André Marques</p>
+    </footer>
+    <script defer type="module" src="scripts/main.js"></script>
+
+</body>
+</html>

@@ -18,6 +18,9 @@ body {
     'footer';
 }
 
+.oculto {
+    display: none !important;
+}
 
 header {
     display: flex;
